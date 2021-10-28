@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useFirebase = () => {
-  const [user, setUser] = useState({ name: "nahid" });
+  const [user, setUser] = useState({ displayName: "nahid" });
 
   return {
     user,
