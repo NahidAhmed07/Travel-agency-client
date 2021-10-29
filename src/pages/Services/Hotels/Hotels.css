@@ -1,0 +1,44 @@
+.hotel-item {
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hotel-item img {
+  height: 100%;
+  width: 100%;
+  transform: translateX(50%);
+  z-index: -1;
+  transition: 0.5s;
+}
+.hotel-img:hover {
+  transform: translateX(0);
+}
+.hotel-img:hover .hotel-item.hotel-text-div {
+  left: -40% !important;
+}
+.hotel-item .hotel-text-div {
+  transform: skewX(-10deg);
+  background: rgb(255, 255, 255);
+  padding: 40px;
+  width: 60%;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+.hotel-item .hotel-text {
+  transform: skewX(10deg);
+}
+
+.hotel-img-text {
+  bottom: 0;
+  position: absolute;
+  right: 20px;
+}
+
+.star-icon {
+  color: goldenrod;
+}

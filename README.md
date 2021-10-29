@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Hospital_Management_System_MediCheck-Assignment-10
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live site link
+
+[live site Link]() : di
 
 ## Available Scripts
 
-In the project directory, you can run:
+- React.js
+- Bootstrap-5
+- Html-5 and css-3
 
-### `yarn start`
+* Node.js
+* Express.js
+* MongoDB As Database
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React-Router-Dom
+- Context Api
+- Firebase Authentication system
+- React-icon library
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* FontAwesome icon
+* AOS Animation library
+* SweetAlert for Alert
 
-### `yarn test`
+## uses of This Website
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- This Website help you easily Search your needed Travel Destination.
+- Hotel services.
+- Here you will also take your relevant Family Tour package.
+- You can book your Tour Tacket advance from online.
+- Choose your Favorite Tour package and Hotel Package.
+- Help to you Know Our facilities
+- Our latest news and special Offer and Discount
+- You may also take our 24/7 Emergency helpline service.
 
-### `yarn build`
+<!-- ## useCounter is my own Created Hook
+- useCounter hook is my own creation . this hook create for making hero section background images slider ...this hook return a counter state that update every 4 second . And this hook receive two parameter
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. counter start index Or default value 1
+2. counter end index Or default value 10
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- background image change a simple array method this counter change the array index value then slider image is automatically change ...
+  ############## happy Coding with Programming Hero ################# -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Nahid Ahmed (owner This Repo and This Website)
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- junior Web Developer in TEAM Rejected .

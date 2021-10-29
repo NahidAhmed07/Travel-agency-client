@@ -2,11 +2,20 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import "./Home.css";
 import Hero from "../Hero/Hero";
+import AboutUs from "../AbouteUs/AboutUs";
+import ServiceOne from "../../Services/ServiceOne/ServiceOne";
+import Hotels from "../../Services/Hotels/Hotels";
+import useAuth from "../../../hooks/useAuth";
+import HotelService from "../../Services/HotelService/HotelService";
 
 const Home = () => {
+  const { setIsMenuOpen } = useAuth();
   return (
-    <main style={{ marginTop: "70px" }}>
+    <main style={{ marginTop: "70px" }} onClick={() => setIsMenuOpen(false)}>
       <Hero></Hero>
+      <AboutUs></AboutUs>
+      <ServiceOne></ServiceOne>
+      <HotelService></HotelService>
     </main>
   );
 };

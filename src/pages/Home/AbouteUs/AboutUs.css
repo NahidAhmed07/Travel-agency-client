@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+.about-main h2 {
+  font-weight: 600;
+}
+
+.about-main h6 {
+  font-weight: 600;
+}
+.specialties-item h5 {
+  color: #061a3a;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 0 15px;
+}
+
+.specialties-item .icon {
+  font-size: 45px;
+  color: #ea7458;
+  margin: 0;
+}
+
+.specialties-item .icon-div {
+  background: rgb(255, 255, 255);
+  height: 70px;
+  width: 70px;
+  padding-top: 13px;
+  border-radius: 100%;
+  position: absolute;
+  left: calc(50% - 35px);
+  top: 135px;
+}
+
+.img-overlay {
+  background: rgba(7, 7, 7, 0.253);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.sp-img {
+  transition: 0.4s;
+}
+.sp-img-div {
+  overflow: hidden;
+}
+
+.sp-img-div:hover .img-overlay {
+  opacity: 1;
+  left: 0;
+  right: 0;
+}
+.sp-img-div:hover .sp-img {
+  transform: scale(1.1);
+}

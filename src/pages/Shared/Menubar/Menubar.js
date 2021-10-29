@@ -13,10 +13,10 @@ import "./Menubar.css";
 
 const Menubar = () => {
   const { user, logOut } = useAuth();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isMenuOpen, setIsMenuOpen } = useAuth();
   return (
     <div className="position-relative">
-      <Navbar style={{ backgroundColor: "#3D3737" }} expand="lg" fixed="top">
+      <Navbar style={{ backgroundColor: "#262626" }} expand="lg" fixed="top">
         <Container fluid className="px-0 px-md-2 px-lg-3">
           <Navbar.Brand className="d-none d-md-block" as={NavLink} to="/home">
             <img src={logo} alt="" height="40px" />
@@ -88,7 +88,6 @@ const Menubar = () => {
 
       <div
         className="user-menu text-start"
-        onBlur={() => setIsMenuOpen(false)}
         style={{ display: isMenuOpen ? "block" : "none" }}
       >
         <AiFillCloseCircle

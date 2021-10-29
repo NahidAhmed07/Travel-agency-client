@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Located in the eastern part of the Arabian Peninsula on the coast of the Persian Gulf",
+    "name": "DUBAI Tour Package",
+    "price": "$80",
+    "img": "https://i.ibb.co/YfjH3xN/dubai.jpg",
+    "temperature": "30° / 86°",
+    "country": "UNITED ARAB EMIRATES",
+    "location": "DUBAI",
+    "serviceId": "SE102040ID",
+    "categories": "medium"
+  },
+  {
+    "title": "London is the capital and largest city of England and the United Kingdom",
+    "name": "LONDON Tour Package",
+    "price": "$100",
+    "img": "https://i.ibb.co/WB5znpw/london.jpg",
+    "temperature": "23° / 73.4°",
+    "country": "UNITED KINGDOM",
+    "location": "LONDON",
+    "serviceId": "SE102041ID",
+    "categories": "medium"
+  },
+  {
+    "title": " SYDNEY is the capital city of the state of New South Wales, and the most populous city in Australia ",
+    "price": "$120",
+    "name": "SYDNEY Tour Package",
+    "img": "https://i.ibb.co/McYPThJ/sydney.jpg",
+    "temperature": "34° / 93.2°",
+    "country": "AUSTRALIA ANS OCEANIA",
+    "location": "SYDNEY",
+    "serviceId": "SE102042ID",
+    "categories": "medium"
+  },
+  {
+    "title": "Rio de Janeiro is the capital of the state of Rio de Janeiro, Brazil's third-most populous state.",
+    "price": "$105",
+    "name": "RIO DE JANEIRO Tour Package",
+    "img": "https://i.ibb.co/7bdj6hR/brazil.jpg",
+    "temperature": "39° / 102.2°",
+    "country": "BRAZIL",
+    "location": "RIO DE JANEIRO",
+    "serviceId": "SE102043ID",
+    "categories": "medium"
+  },
+  {
+    "title": "Male is the capital and most populous city in the Republic of Maldives. With a population of 227,486.",
+    "price": "$110",
+    "name": "MALE Tour Package",
+    "img": "https://i.ibb.co/KV2SDs7/male.jpg",
+    "temperature": "35° / 95°",
+    "country": "MALDIVES",
+    "location": "MALE",
+    "serviceId": "SE102044ID",
+    "categories": "medium"
+  },
+  {
+    "title": "The city straddles the Bosphorus strait, and lies in both Europe and Asia, with a population.",
+    "price": "$85",
+    "name": "ISTANBUL Tour Package",
+    "img": "https://i.ibb.co/MSQgSys/istanbul.jpg",
+    "temperature": "30° / 86°",
+    "country": "TURKEY",
+    "location": "ISTANBUL",
+    "serviceId": "SE102045ID",
+    "categories": "medium"
+  },
+  {
+    "title": "Vienna is Austria's most populous city, with about 2 million inhabitants 2.6 million.",
+    "price": "$75",
+    "name": "VIENNA Tour Package",
+    "img": "https://i.ibb.co/zSVMXTy/vienne.jpg",
+    "temperature": "25° / 77°",
+    "country": "AUSTRIA",
+    "location": "VIENNA",
+    "serviceId": "SE102046ID",
+    "categories": "medium"
+  },
+  {
+    "title": "Venice has been known as La Dominante,La Serenissima, Queen ofthe Adriatic, City of Water, City of Masks",
+    "price": "$115",
+    "name": "VENICE Tour Package",
+    "img": "https://i.ibb.co/LzZVh2p/venice.jpg",
+    "temperature": "22° / 71.6",
+    "country": "ITALY",
+    "location": "VENICE",
+    "serviceId": "SE102042ID",
+    "categories": "medium"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Book at Hotel Bohemians, Prague. No Reservation Costs. Great Rates. ",
+    "price": "$90",
+    "hotel": "HOTEL BOHEMIANS",
+    "rating": 5,
+    "name": "HOTEL BOHEMIANS Family Package",
+    "img": "https://i.ibb.co/Hr1pTKm/hotel-1.jpg",
+    "location": "Istanbul, Turkey",
+    "serviceId": "SE102050ID",
+    "categories": "hotel"
+  },
+  {
+    "title": "easyHotel offers cheap hotel bookings in the UK and worldwide. ",
+    "price": "$35",
+    "hotel": "EASYHOTEL",
+    "rating": 3,
+    "name": "EASYHOTEL Cupule Package",
+    "img": "https://i.ibb.co/Dfpf1c3/hotel-2.jpg",
+    "location": "Praga, Czech Republic",
+    "serviceId": "SE102051ID",
+    "categories": "hotel"
+  },
+  {
+    "title": "Hotel Dolce Villa is a unique boutique hotel in Providence, Rhode Island",
+    "price": "$110",
+    "rating": 5,
+    "hotel": "DOLCE VILLA",
+    "name": "DOLCE VILLA Single package",
+    "img": "https://i.ibb.co/YDCCqgr/hotel-3.jpg",
+    "location": " Isle of Colonsay, United...",
+    "serviceId": "SE102052ID",
+    "categories": "hotel"
+  },
+  {
+    "title": "Hotel Starý Pivovar offers free high-speed WiFi, a 24-hour lobby bar and a restaurant ",
+    "price": "$55",
+    "hotel": "HOTEL STARY PIVOVAR",
+    "rating": 5,
+    "name": "HOTEL STARY PIVOVAR ",
+    "img": "https://i.ibb.co/PN6q55n/hotel-4.jpg",
+    "location": " St. Petersburg, Russia",
+    "serviceId": "SE102053ID",
+    "categories": "hotel"
+  },
+  {
+    "title": "Welcome to the Grand Hotel Wien, one of the finest luxury hotels in Vienna,",
+    "price": "$98",
+    "hotel": "GRAND HOTEL WIEN ",
+    "rating": 4,
+    "name": "GRAND HOTEL WIEN Family Package",
+    "img": "https://i.ibb.co/KNZvGrB/hotel-5.jpg",
+    "location": " Vienna, Austria",
+    "serviceId": "SE102054ID",
+    "categories": "hotel"
+  },
+  {
+    "title": "Wit Stwosz Hotel is a family-friendly hotel offering a flat screen TV",
+    "price": "$75",
+    "hotel": "HOTEL WIT STWOSZ",
+    "rating": 5,
+    "name": "HOTEL WIT STWOSZ Cupule Package",
+    "img": "https://i.ibb.co/NtKkVH3/hotel-6.jpg",
+    "location": "Kraków, Poland",
+    "serviceId": "SE102055ID",
+    "categories": "hotel"
+  }
+]

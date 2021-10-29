@@ -7,3 +7,13 @@
   min-height: 100vh;
   background-blend-mode: overlay;
 }
+
+.hero-book-btn {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background: #04afef;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}

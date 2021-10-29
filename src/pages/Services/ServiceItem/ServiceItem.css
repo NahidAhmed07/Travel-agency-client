@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+.service-item {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.438);
+  font-family: "Montserrat", sans-serif;
+  background-blend-mode: overlay;
+  overflow: hidden;
+}
+
+.service-item:hover .transform-text {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.service-item:hover .transform-text-low {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.service-item h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffc107;
+}
+
+.service-item h4 {
+  color: rgb(230, 228, 228);
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.service-item p {
+  color: rgb(214, 214, 214);
+  text-align: left;
+  font-weight: 500;
+}
+
+.transform-text {
+  transform: translateY(40px);
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.transform-text-low {
+  transform: translateY(10px);
+  transition: 0.4s;
+}
+
+.book-now-btn {
+  border: 1px solid #ffc107;
+  background: transparent;
+  color: #ffc107;
+  padding: 5px 15px;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.book-now-btn:hover {
+  border-color: #be9003;
+  background: #be9003;
+  color: white;
+}
