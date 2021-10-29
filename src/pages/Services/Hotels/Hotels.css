@@ -28,17 +28,53 @@
   bottom: 0;
   left: 0;
   z-index: 99;
+  height: 280px;
+  overflow: hidden;
 }
 .hotel-item .hotel-text {
   transform: skewX(10deg);
+  height: 280px;
 }
 
 .hotel-img-text {
   bottom: 0;
   position: absolute;
   right: 20px;
+  overflow: hidden;
 }
 
 .star-icon {
   color: goldenrod;
+}
+
+.hotel-text .hotel-text-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hotel-text p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hotel-img-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.hotel-book-btn {
+  border: none;
+  transition: 0.4s;
+  background: #e2aa03;
+  color: white;
+  padding: 5px 15px;
+  font-weight: 600;
+  position: absolute;
+  right: -30px;
+  bottom: 50px;
+}
+.hotel-book-btn:hover {
+  background: #080d11;
+  color: #ffc107;
 }

@@ -34,7 +34,7 @@ const Menubar = () => {
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
-                to="/donation"
+                to="/my_orders"
                 className="nav-item"
                 activeClassName="active-item"
               >
@@ -42,7 +42,7 @@ const Menubar = () => {
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
-                to="/user_events"
+                to="/manage_orders"
                 className="nav-item"
                 activeClassName="active-item"
               >
@@ -50,7 +50,7 @@ const Menubar = () => {
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
-                to="/blog"
+                to="/add_service"
                 className="nav-item"
                 activeClassName="active-item"
               >
@@ -105,13 +105,13 @@ const Menubar = () => {
           />
         </div>
         <h5 className="mt-2 text-center">
-          {user.displayName || "Unknown User"}
+          {user.displayName || "Anonymous User"}
         </h5>
         <hr />
 
         <Nav.Link
           as={NavLink}
-          to="/user_events"
+          to="/my_orders"
           className="user-nav-item"
           activeClassName="active-item"
         >
@@ -120,7 +120,7 @@ const Menubar = () => {
         </Nav.Link>
         <Nav.Link
           as={NavLink}
-          to="/admin/volunteer"
+          to="/manage_orders"
           className="user-nav-item"
           activeClassName="active-item"
         >

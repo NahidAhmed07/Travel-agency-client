@@ -18,7 +18,7 @@ const AboutUs = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/specialties")
+      .get("https://limitless-hollows-06705.herokuapp.com/specialties")
       .then((res) => {
         setSpecialties(res.data);
       })

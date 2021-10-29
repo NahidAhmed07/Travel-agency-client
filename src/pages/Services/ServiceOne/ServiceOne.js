@@ -8,7 +8,9 @@ const ServiceOne = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/services?categories=medium")
+      .get(
+        "https://limitless-hollows-06705.herokuapp.com/services?categories=medium"
+      )
       .then((res) => {
         setServices(res.data);
       })

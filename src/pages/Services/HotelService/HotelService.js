@@ -8,13 +8,14 @@ const HotelService = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/services?categories=hotel")
+      .get(
+        "https://limitless-hollows-06705.herokuapp.com/services?categories=hotel"
+      )
       .then((res) => {
         setHotels(res.data);
       })
       .catch((err) => console.log(err.message));
   }, []);
-  console.log(hotels);
   return (
     <Container>
       <Row className="mb-4 mb-md-0 ">
