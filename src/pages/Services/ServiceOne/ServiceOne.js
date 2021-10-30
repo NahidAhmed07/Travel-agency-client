@@ -20,7 +20,13 @@ const ServiceOne = () => {
     <Container fluid id="services" className="pt-5">
       <Container>
         <Row className="mb-4 mb-md-0">
-          <Col sm="12" md="8" className="text-start">
+          <Col
+            data-aos="fade-right"
+            data-aos-duration="800"
+            sm="12"
+            md="8"
+            className="text-start"
+          >
             <div className="serviceOne mt-1 mt-md-5 pt-1 pt-md-4">
               <h6 className="fw-bold">SPECIAL OFFERS</h6>
               <h2
@@ -32,7 +38,12 @@ const ServiceOne = () => {
               </h2>
             </div>
           </Col>
-          <Col md="4" className="d-none d-md-block">
+          <Col
+            md="4"
+            className="d-none d-md-block"
+            data-aos="fade-left  "
+            data-aos-duration="800"
+          >
             <img
               className="img-fluid"
               src="https://i.ibb.co/P5j1NG9/promo-1-2x.png"

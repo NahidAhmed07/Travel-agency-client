@@ -23,7 +23,7 @@ const Hotels = ({ hotelItem }) => {
   };
 
   return (
-    <Col>
+    <Col data-aos="fade-left" data-aos-duration="800">
       <div className="d-flex hotel-item">
         <div className="hotel-text-div" ref={textRef}>
           <div className="text-start hotel-text">

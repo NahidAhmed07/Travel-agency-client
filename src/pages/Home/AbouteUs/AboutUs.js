@@ -28,8 +28,12 @@ const AboutUs = () => {
   return (
     <Container fluid className="my-5 pt-5 about-main" id="specialties">
       <Container className="pt-5">
-        <h6>TRAVESIA SPECIALS</h6>
+        <h6 data-aos="fade-left" data-aos-duration="800">
+          TRAVESIA SPECIALS
+        </h6>
         <h2
+          data-aos="fade-right"
+          data-aos-duration="800"
           className="display-3 mt-3 pb-3"
           style={{ borderBottom: "3px solid #ffc107" }}
         >
@@ -39,7 +43,7 @@ const AboutUs = () => {
         <Row className="mt-5 g-3">
           {specialties.length > 0 ? (
             specialties.map((item, index) => (
-              <Col key={item._id}>
+              <Col key={item._id} data-aos="fade-up" data-aos-duration="800">
                 <div
                   style={{ width: "18rem" }}
                   className="specialties-item position-relative"

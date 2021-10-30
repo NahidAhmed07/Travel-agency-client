@@ -49,6 +49,9 @@ const MyOrders = () => {
               );
 
               setMyOrders(remaining);
+              if (remaining.length < 1) {
+                setOrderNotFound(true);
+              }
               swal("Poof! Your imaginary file has been deleted!", {
                 icon: "success",
               });

@@ -6,6 +6,8 @@ import { FcApproval } from "react-icons/fc";
 import swal from "sweetalert";
 import useAuth from "../../../hooks/useAuth";
 import { processDate } from "../../../utilities/utilities";
+import TableView from "./TableView";
+import CartView from "./CartView";
 
 const ManageOrders = () => {
   const { setIsMenuOpen } = useAuth();
@@ -104,54 +106,22 @@ const ManageOrders = () => {
       </Row>
       <Row className="my-5">
         {allOrder.length > 0 ? (
-          <Table striped hover className="table">
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>service Name</th>
-                <th>Order Date</th>
-                <th>status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            {allOrder.map((order) => {
-              const {
-                name,
-                service,
-                registerDate,
-                status,
-                _id,
-                serviceId,
-                userId,
-              } = order;
-              return (
-                <tbody key={_id}>
-                  <tr style={{ borderWidth: "1px" }}>
-                    <td>{name}</td>
-                    <td>{service}</td>
-                    <td>{processDate(registerDate)}</td>
-                    <td>
-                      {status === "approved" ? (
-                        <span className="approved">Approved</span>
-                      ) : (
-                        <span className="pending">Pending...</span>
-                      )}
-                    </td>
-                    <td>
-                      <FcApproval
-                        onClick={() => handleApproved(serviceId, userId)}
-                        className="admin-approved-btn me-4 fs-3"
-                      />
-                      <RiDeleteBin6Line
-                        onClick={() => handleDelete(serviceId, userId)}
-                        className="admin-delete-btn fs-3"
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              );
-            })}
-          </Table>
+          <div>
+            <div className="d-none d-md-block">
+              <TableView
+                allOrder={allOrder}
+                handleApproved={handleApproved}
+                handleDelete={handleDelete}
+              ></TableView>
+            </div>
+            <div className="d-md-none">
+              <CartView
+                allOrder={allOrder}
+                handleApproved={handleApproved}
+                handleDelete={handleDelete}
+              ></CartView>
+            </div>
+          </div>
         ) : (
           <Col sm="2" lg="1" className="mx-auto">
             <Spinner animation="border" variant="secondary" />

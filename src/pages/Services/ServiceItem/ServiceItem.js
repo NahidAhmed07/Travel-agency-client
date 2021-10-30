@@ -11,7 +11,7 @@ const ServiceItem = ({ service }) => {
     history.push(`/place_order/${id}`);
   };
   return (
-    <Col className="m-0 p-0">
+    <Col className="m-0 p-0" data-aos="zoom-in-up" data-aos-duration="800">
       <div
         className="service-item position-relative p-3"
         style={{ backgroundImage: `url(${img})` }}

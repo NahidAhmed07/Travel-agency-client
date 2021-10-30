@@ -33,3 +33,18 @@ td {
 .pending {
   background: #0094ca;
 }
+
+._book-btn {
+  border: none;
+  transition: 0.4s;
+  background: #e2aa03;
+  color: white;
+  padding: 5px 15px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+._book-btn:hover {
+  background: #080d11;
+  color: #ffc107;
+}

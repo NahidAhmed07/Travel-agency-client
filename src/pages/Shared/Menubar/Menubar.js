@@ -45,7 +45,7 @@ const Menubar = () => {
               </NavHashLink>
 
               <NavHashLink
-                to="/home#offer"
+                to="/home#service_2"
                 className="nav-item"
                 activeClassName="active-item"
               >

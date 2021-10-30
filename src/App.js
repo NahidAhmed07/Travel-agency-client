@@ -11,8 +11,20 @@ import PlaceOrder from "./pages/Services/PlaceOrder/PlaceOrder";
 import ManageOrders from "./pages/Services/ManageOrders/ManageOrders";
 import NotFound from "./pages/NotFound/NotFound";
 import AddNewService from "./pages/Services/AddNewService/AddNewService";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  AOS.init({
+    disable: false,
+    startEvent: "DOMContentLoaded",
+    initClassName: "aos-init",
+    animatedClassName: "aos-animate",
+    useClassNames: false,
+    disableMutationObserver: false,
+    debounceDelay: 50,
+    throttleDelay: 99,
+  });
   return (
     <div className="App">
       <AuthProvider>

@@ -3,7 +3,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section className="hero-main text-white" id="home">
+    <section className="hero-main text-white position-relative" id="home">
       <div
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh" }}
