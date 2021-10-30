@@ -9,6 +9,7 @@ import "./MyOrder.css";
 const MyOrders = () => {
   const [myOrders, setMyOrders] = useState([]);
   const { user, setIsMenuOpen } = useAuth();
+  const [orderNotFound, setOrderNotFound] = useState(false);
 
   useEffect(() => {
     if (user.displayName) {
@@ -17,15 +18,17 @@ const MyOrders = () => {
           `https://limitless-hollows-06705.herokuapp.com/my_order/${user.uid}`
         )
         .then((res) => {
-          setMyOrders(res.data);
-          console.log(res.data);
+          if (res.data.orderNotFound) {
+            setOrderNotFound(true);
+          } else {
+            setMyOrders(res.data);
+          }
         })
         .catch((err) => console.log(err.message));
     }
   }, [user]);
 
   const handleCancel = (id) => {
-    console.log(id, user.uid);
     swal({
       title: "Are you sure?",
       text: "Cancel This service form you Order list",
@@ -75,62 +78,66 @@ const MyOrders = () => {
       </Row>
 
       <Row className="my-5 g-2 text-start">
-        {myOrders.length > 0 ? (
-          myOrders.map((order) => {
-            const {
-              _id,
-              name,
-              location,
-              data,
-              registerDate,
-              img,
-              serviceId,
-              country,
-            } = order;
-            return (
-              <Col key={_id}>
-                <Card
-                  className="d-flex gap-3 p-3  align-items-center shadow-lg  flex-column "
-                  style={{ width: "18rem", height: "100%" }}
-                >
-                  <Card.Img
-                    className="img-fluid"
-                    width="280px"
-                    style={{ height: "200px" }}
-                    src={img}
-                    alt=""
-                  />
+        {!orderNotFound ? (
+          myOrders.length > 0 ? (
+            myOrders.map((order) => {
+              const {
+                _id,
+                name,
+                location,
+                data,
+                registerDate,
+                img,
+                serviceId,
+                country,
+              } = order;
+              return (
+                <Col key={_id}>
+                  <Card
+                    className="d-flex gap-3 p-3  align-items-center shadow-lg  flex-column "
+                    style={{ width: "18rem", height: "100%" }}
+                  >
+                    <Card.Img
+                      className="img-fluid"
+                      width="280px"
+                      style={{ height: "200px" }}
+                      src={img}
+                      alt=""
+                    />
 
-                  <Card.Body className="p-2 order-cart-text">
-                    <h6>{name}</h6>
-                    <p>
-                      <strong> Location :</strong>{" "}
-                      {(country ? country : " ") + " " + location}
-                    </p>
+                    <Card.Body className="p-2 order-cart-text">
+                      <h6>{name}</h6>
+                      <p>
+                        <strong> Location :</strong>{" "}
+                        {(country ? country : " ") + " " + location}
+                      </p>
 
-                    <p className="my-3">
-                      <strong>Travel Date :</strong> {processDate(data)}
-                    </p>
-                    <p>
-                      <strong>Order date:</strong> {processDate(registerDate)}
-                    </p>
-                  </Card.Body>
-                  <Card.Footer>
-                    <button
-                      onClick={() => handleCancel(serviceId)}
-                      className="hero-book-btn"
-                    >
-                      Cancel Order{" "}
-                    </button>
-                  </Card.Footer>
-                </Card>
-              </Col>
-            );
-          })
+                      <p className="my-3">
+                        <strong>Travel Date :</strong> {processDate(data)}
+                      </p>
+                      <p>
+                        <strong>Order date:</strong> {processDate(registerDate)}
+                      </p>
+                    </Card.Body>
+                    <Card.Footer>
+                      <button
+                        onClick={() => handleCancel(serviceId)}
+                        className="hero-book-btn"
+                      >
+                        Cancel Order{" "}
+                      </button>
+                    </Card.Footer>
+                  </Card>
+                </Col>
+              );
+            })
+          ) : (
+            <Col sm="2" lg="1" className="mx-auto">
+              <Spinner animation="border" variant="secondary" />
+            </Col>
+          )
         ) : (
-          <Col sm="2" lg="1" className="mx-auto">
-            <Spinner animation="border" variant="secondary" />
-          </Col>
+          <h1 className="text-center">Your Order list is empty</h1>
         )}
       </Row>
     </Container>

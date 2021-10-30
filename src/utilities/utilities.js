@@ -6,28 +6,6 @@ export const footerImages = [
   "https://i.ibb.co/KV2SDs7/male.jpg",
   "https://i.ibb.co/MSQgSys/istanbul.jpg",
 ];
-
-export const posts = [
-  {
-    img: "https://i.ibb.co/fdjNMbq/food-Charity.png",
-    title: "How About Fall Cleaning?",
-    date: "April 05, 2020",
-    id: "ID12012",
-  },
-  {
-    img: "https://i.ibb.co/B4Dg9hV/bird-House.png",
-    title: "Four Ways a Clean",
-    date: "May 02, 2021",
-    id: "ID12013",
-  },
-  {
-    img: "https://i.ibb.co/sgb7w2N/ITHelp.png",
-    title: "Time For Spring Cleaning ?",
-    date: "Jun 05, 2021",
-    id: "ID12014",
-  },
-];
-
 const month = [
   "Jan",
   "Feb",
@@ -46,4 +24,25 @@ const month = [
 export const processDate = (date) => {
   const strdata = date.split("-");
   return `${strdata[0]} ${month[strdata[1] - 1]}, ${strdata[2]}`;
+};
+
+// generate random id
+export const randomId = () => {
+  const randomNumber = Math.round(Math.random() * 1000000);
+  const id = `EV${randomNumber}ENT`;
+  return id;
+};
+
+// generate random images
+const findImages = [];
+export const randomImage = () => {
+  const index = Math.floor(Math.random() * footerImages.length);
+  const currentImg = footerImages[index];
+  if (findImages.includes(currentImg)) {
+    return randomImage();
+  } else {
+    findImages.shift();
+    findImages.push(currentImg);
+    return currentImg;
+  }
 };

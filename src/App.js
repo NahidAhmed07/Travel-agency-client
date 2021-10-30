@@ -10,6 +10,7 @@ import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import PlaceOrder from "./pages/Services/PlaceOrder/PlaceOrder";
 import ManageOrders from "./pages/Services/ManageOrders/ManageOrders";
 import NotFound from "./pages/NotFound/NotFound";
+import AddNewService from "./pages/Services/AddNewService/AddNewService";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/manage_orders">
               <ManageOrders></ManageOrders>
+            </PrivateRoute>
+
+            <PrivateRoute path="/add_service">
+              <AddNewService></AddNewService>
             </PrivateRoute>
 
             <Route path="*">

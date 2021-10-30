@@ -83,3 +83,12 @@
 .up-icon:hover {
   background: #0094ca;
 }
+
+.gallery-img {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}

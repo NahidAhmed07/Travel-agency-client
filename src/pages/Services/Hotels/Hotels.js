@@ -34,7 +34,7 @@ const Hotels = ({ hotelItem }) => {
               ))}
             </h6>
             <h5>
-              <span className="fs-3">{price} </span> <small>per night</small>
+              <span className="fs-3">{price} </span> <small>per day</small>
             </h5>
             <p className="my-3 d-none d-md-block">{title} </p>
             <div>
