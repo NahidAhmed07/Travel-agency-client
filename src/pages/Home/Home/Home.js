@@ -1,10 +1,8 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import "./Home.css";
 import Hero from "../Hero/Hero";
 import AboutUs from "../AbouteUs/AboutUs";
 import ServiceOne from "../../Services/ServiceOne/ServiceOne";
-import Hotels from "../../Services/Hotels/Hotels";
 import useAuth from "../../../hooks/useAuth";
 import HotelService from "../../Services/HotelService/HotelService";
 

@@ -1,10 +1,9 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section className="hero-main text-white">
+    <section className="hero-main text-white" id="home">
       <div
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh" }}

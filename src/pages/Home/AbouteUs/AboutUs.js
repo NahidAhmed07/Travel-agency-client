@@ -26,10 +26,16 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <Container fluid className="my-5 pt-5 about-main">
-      <Container>
+    <Container fluid className="my-5 pt-5 about-main" id="specialties">
+      <Container className="pt-5">
         <h6>TRAVESIA SPECIALS</h6>
-        <h2 className="display-3 mt-3">Why Travel with Tutive?</h2>
+        <h2
+          className="display-3 mt-3 pb-3"
+          style={{ borderBottom: "3px solid #ffc107" }}
+        >
+          Why Travel with Tutive?
+        </h2>
+
         <Row className="mt-5 g-3">
           {specialties.length > 0 ? (
             specialties.map((item, index) => (

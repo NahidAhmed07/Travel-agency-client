@@ -17,7 +17,7 @@ const HotelService = () => {
       .catch((err) => console.log(err.message));
   }, []);
   return (
-    <Container>
+    <Container id="hotel" className="my-5">
       <Row className="mb-4 mb-md-0 ">
         <Col sm="12" md="8" className="text-start my-5">
           <div className="serviceOne mt-1 mt-md-5 pt-1 pt-md-4">

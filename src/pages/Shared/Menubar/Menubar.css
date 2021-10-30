@@ -1,8 +1,14 @@
 .nav-item {
   font-weight: 500;
   font-size: 16px;
+  text-decoration: none;
   color: #f8f8f8 !important;
-  margin-right: 15px;
+  margin-right: 35px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.active-item {
+  border-color: #3f90fc;
 }
 
 .nav-btn {
@@ -54,8 +60,11 @@
   font-weight: 500;
   font-size: 17px;
   transition: 0.4s;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .user-nav-item:hover {
-  color: #131313;
+  color: #0080af !important;
 }

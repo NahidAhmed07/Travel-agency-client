@@ -17,14 +17,14 @@ const ServiceOne = () => {
       .catch((err) => console.log(err.message));
   }, []);
   return (
-    <Container fluid>
+    <Container fluid id="services" className="pt-5">
       <Container>
         <Row className="mb-4 mb-md-0">
           <Col sm="12" md="8" className="text-start">
             <div className="serviceOne mt-1 mt-md-5 pt-1 pt-md-4">
               <h6 className="fw-bold">SPECIAL OFFERS</h6>
               <h2
-                className="display-5 pb-3"
+                className="display-6 pb-3"
                 style={{ borderBottom: "3px solid #ffc107" }}
               >
                 <span className="fw-bold">POPULAR </span>
