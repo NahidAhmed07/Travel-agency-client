@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import axios from "axios";
 import { footerImages } from "../../../utilities/utilities";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   const [posts, setPosts] = useState([]);
@@ -26,18 +27,18 @@ const Footer = () => {
             <br />
             <ul className="useful-links">
               <li>
-                <NavLink to="/home#home">&#62; Home</NavLink>
+                <HashLink to="/home#home">&#62; Home</HashLink>
               </li>
               <li>
-                <NavLink to="/my_orders"> &#62; My Orders </NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/manage_orders">&#62; Manage All Orders</NavLink>
+                <HashLink to="/home#services"> &#62; Services </HashLink>
               </li>
 
               <li>
-                <NavLink to="/add_new_order">&#62; Add A New Orders</NavLink>
+                <HashLink to="/home#service_2">&#62; Special Offer</HashLink>
+              </li>
+
+              <li>
+                <HashLink to="/home#hotel">&#62; Hotels</HashLink>
               </li>
 
               <li>
@@ -50,25 +51,16 @@ const Footer = () => {
           </Col>
           <Col>
             {/* post single items  */}
-            <h5>Recent Post</h5>
+            <h5>Contact Information</h5>
             <hr />
             <br />
             <div>
-              {posts?.map((post) => (
-                <div
-                  key={post.id}
-                  className="d-flex gap-4 align-items-center my-4 post-item"
-                >
-                  <img className="circle-img " src={post.img} alt="" />
-                  <div>
-                    <h6 className="fw-bold">{post.title}</h6>
-                    <p>
-                      <FaRegCalendarAlt className="me-3" />
-                      {post.date}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              <strong>Email :</strong> <br />
+              <p className="email"> developernahid@gmail.com</p>
+              <p className="email">mdnahidahmed2002@gmail.com</p>
+              <strong>Phone : </strong> <br />
+              <p className="phone">01758597460</p>
+              <p className="phone">01627816080</p>
             </div>
           </Col>
           <Col>

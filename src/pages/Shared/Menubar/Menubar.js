@@ -20,7 +20,7 @@ const Menubar = () => {
   const { isMenuOpen, setIsMenuOpen } = useAuth();
   return (
     <div className="position-relative">
-      <Navbar style={{ backgroundColor: "#262626" }} expand="lg" fixed="top">
+      <Navbar style={{ backgroundColor: "#223645" }} expand="lg" fixed="top">
         <Container>
           <Navbar.Brand className="d-none d-md-block" as={NavLink} to="/home">
             <img src={logo} alt="" height="40px" />

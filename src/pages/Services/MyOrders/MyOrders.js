@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import { AiFillStar } from "react-icons/ai";
 import swal from "sweetalert";
 import useAuth from "../../../hooks/useAuth";
 import { processDate } from "../../../utilities/utilities";
@@ -80,7 +81,7 @@ const MyOrders = () => {
         </Col>
       </Row>
 
-      <Row className="my-5 g-2 text-start">
+      <Row className="my-5 g-4 text-start">
         {!orderNotFound ? (
           myOrders.length > 0 ? (
             myOrders.map((order) => {
@@ -89,43 +90,53 @@ const MyOrders = () => {
                 name,
                 location,
                 data,
-                registerDate,
                 img,
                 serviceId,
-                country,
+                status,
+                rating,
               } = order;
               return (
                 <Col key={_id}>
                   <Card
-                    className="d-flex gap-3 p-3  align-items-center shadow-lg  flex-column "
-                    style={{ width: "18rem", height: "100%" }}
+                    className="text-start mx-auto"
+                    style={{ width: "18rem" }}
                   >
                     <Card.Img
-                      className="img-fluid"
-                      width="280px"
+                      variant="top"
                       style={{ height: "200px" }}
+                      className="img-fluid"
                       src={img}
-                      alt=""
                     />
-
-                    <Card.Body className="p-2 order-cart-text">
-                      <h6>{name}</h6>
+                    <Card.Body>
+                      <Card.Title className="fw-bold">{name}</Card.Title>
                       <p>
-                        <strong> Location :</strong>{" "}
-                        {(country ? country : " ") + " " + location}
+                        <small>{location}</small>
                       </p>
-
+                      <h6>
+                        {[...Array(parseInt(rating || 4) || 4).keys()].map(
+                          (index) => (
+                            <AiFillStar key={index} className="star-icon" />
+                          )
+                        )}
+                        <small> {parseInt(rating) || 4} reviews</small>
+                      </h6>
                       <p className="my-3">
-                        <strong>Travel Date :</strong> {processDate(data)}
+                        <strong>Travel Date : </strong>
+                        {processDate(data)}
                       </p>
-                      <p>
-                        <strong>Order date:</strong> {processDate(registerDate)}
-                      </p>
+                      <h6>
+                        <strong>Status : </strong>
+                        {status === "approved" ? (
+                          <span className="approved">Approved</span>
+                        ) : (
+                          <span className="pending">Pending...</span>
+                        )}
+                      </h6>
                     </Card.Body>
                     <Card.Footer>
                       <button
                         onClick={() => handleCancel(serviceId)}
-                        className="hero-book-btn"
+                        className="_book-btn"
                       >
                         Cancel Order{" "}
                       </button>
