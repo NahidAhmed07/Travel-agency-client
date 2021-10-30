@@ -6,6 +6,7 @@ import ServiceOne from "../../Services/ServiceOne/ServiceOne";
 import useAuth from "../../../hooks/useAuth";
 import HotelService from "../../Services/HotelService/HotelService";
 import ServiceTwo from "../../Services/ServiceTwo/ServiceTwo";
+import Testimonial from "../Testimonial/Testimonial";
 
 const Home = () => {
   const { setIsMenuOpen } = useAuth();
@@ -16,6 +17,7 @@ const Home = () => {
       <ServiceOne></ServiceOne>
       <HotelService></HotelService>
       <ServiceTwo></ServiceTwo>
+      <Testimonial></Testimonial>
     </main>
   );
 };
