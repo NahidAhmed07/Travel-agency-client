@@ -11,14 +11,18 @@ const MyOrders = () => {
   const { user, setIsMenuOpen } = useAuth();
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:5000/my_order/${user.uid}`)
-      .then((res) => {
-        setMyOrders(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err.message));
-  }, []);
+    if (user.displayName) {
+      axios
+        .get(
+          `https://limitless-hollows-06705.herokuapp.com/my_order/${user.uid}`
+        )
+        .then((res) => {
+          setMyOrders(res.data);
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err.message));
+    }
+  }, [user]);
 
   const handleCancel = (id) => {
     console.log(id, user.uid);
@@ -31,7 +35,9 @@ const MyOrders = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`http://localhost:5000/my_order/${id}/${user.uid}`)
+          .delete(
+            `https://limitless-hollows-06705.herokuapp.com/my_order/${id}/${user.uid}`
+          )
           .then((res) => {
             console.log(res.data);
             if (res.data.deletedCount > 0) {

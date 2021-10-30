@@ -28,7 +28,7 @@ const PlaceOrder = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/services/${id}`)
+      .get(`https://limitless-hollows-06705.herokuapp.com/services/${id}`)
       .then((res) => {
         setService(res.data);
       })
@@ -45,7 +45,7 @@ const PlaceOrder = () => {
     data.status = "Pending...";
 
     axios
-      .post("http://localhost:5000/place_order", data)
+      .post("https://limitless-hollows-06705.herokuapp.com/place_order", data)
       .then((res) => {
         if (res.data?.serviceAdded) {
           swal({

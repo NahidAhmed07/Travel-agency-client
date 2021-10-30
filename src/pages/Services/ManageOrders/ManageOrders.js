@@ -1,17 +1,17 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Spinner, Table } from "react-bootstrap";
 import useAuth from "../../../hooks/useAuth";
+import { processDate } from "../../../utilities/utilities";
 
 const ManageOrders = () => {
-  const { setIsMenuOpen } = useAuth();
+  const { setIsMenuOpen, user } = useAuth();
   const [allOrder, setAllOrder] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all_order")
+      .get("https://limitless-hollows-06705.herokuapp.com/all_order")
       .then((res) => {
-        console.log(res.data);
         setAllOrder(res.data);
       })
       .catch((err) => console.log(err.message));
@@ -35,6 +35,42 @@ const ManageOrders = () => {
             </h2>
           </div>
         </Col>
+      </Row>
+      <Row className="my-5">
+        {allOrder.length > 0 ? (
+          <Table striped hover>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>service Name</th>
+                <th>Order Date</th>
+                <th>status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            {allOrder.map((order) => {
+              const { name, service, registerDate, status, _id } = order;
+              return (
+                <tbody key={_id}>
+                  <tr>
+                    <td>{name}</td>
+                    <td>{service}</td>
+                    <td>{processDate(registerDate)}</td>
+                    <td>{status}</td>
+                    <td>
+                      <button>approved</button>
+                      <button>delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              );
+            })}
+          </Table>
+        ) : (
+          <Col sm="2" lg="1" className="mx-auto">
+            <Spinner animation="border" variant="secondary" />
+          </Col>
+        )}
       </Row>
     </Container>
   );
