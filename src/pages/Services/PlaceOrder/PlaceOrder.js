@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router";
@@ -6,10 +6,12 @@ import axios from "axios";
 import useAuth from "../../../hooks/useAuth";
 import swal from "sweetalert";
 import "./PlaceOrder.css";
+import error from "../../../audio/error.mp3";
 
 const PlaceOrder = () => {
   const [service, setService] = useState({});
   const { id } = useParams();
+  const audioRef = useRef();
   const { name, location, country, price, img, title } = service;
   const {
     register,
@@ -49,6 +51,7 @@ const PlaceOrder = () => {
       .then((res) => {
         // user notification
         if (res.data?.serviceAdded) {
+          audioRef.current.play();
           swal({
             title: "Registration Failed !",
             text: "This service already Added your Order list",
@@ -152,6 +155,7 @@ const PlaceOrder = () => {
           </div>
         </Col>
       </Row>
+      <audio ref={audioRef} src={error}></audio>
     </Container>
   );
 };

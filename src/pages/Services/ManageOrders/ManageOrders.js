@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Row, Spinner, Table } from "react-bootstrap";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FcApproval } from "react-icons/fc";
@@ -8,10 +8,12 @@ import useAuth from "../../../hooks/useAuth";
 import { processDate } from "../../../utilities/utilities";
 import TableView from "./TableView";
 import CartView from "./CartView";
+import error from "../../../audio/error.mp3";
 
 const ManageOrders = () => {
   const { setIsMenuOpen } = useAuth();
   const [allOrder, setAllOrder] = useState([]);
+  const audioRef = useRef();
 
   useEffect(() => {
     axios
@@ -23,6 +25,7 @@ const ManageOrders = () => {
   }, []);
 
   const handleDelete = (sid, uid) => {
+    audioRef.current.play();
     // sid == serviceId and uid == userId
     swal({
       title: "Are you sure?",
@@ -76,6 +79,7 @@ const ManageOrders = () => {
             setAllOrder([findItem, ...remaining]);
           }
         } else {
+          audioRef.current.play();
           swal({
             title: "This Service Already Approved !",
             icon: "warning",
@@ -130,6 +134,7 @@ const ManageOrders = () => {
           </Col>
         )}
       </Row>
+      <audio ref={audioRef} src={error}></audio>
     </Container>
   );
 };
