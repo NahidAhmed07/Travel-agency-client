@@ -47,7 +47,7 @@ const AboutUs = () => {
               <Col key={item._id} data-aos="fade-up" data-aos-duration="800">
                 <div
                   style={{ width: "18rem" }}
-                  className="specialties-item position-relative"
+                  className="specialties-item position-relative mx-auto"
                 >
                   <div className="position-relative sp-img-div">
                     <img className="img-fluid sp-img" src={item.img} alt="" />

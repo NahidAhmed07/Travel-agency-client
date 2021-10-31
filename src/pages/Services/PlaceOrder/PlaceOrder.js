@@ -25,7 +25,7 @@ const PlaceOrder = () => {
   const [isUpdated, setIsUpdated] = useState(false);
 
   setValue("name", user.displayName);
-  setValue("email", user.email || user.displayName);
+  setValue("email", user.email);
   setValue("service", service.name);
 
   useEffect(() => {

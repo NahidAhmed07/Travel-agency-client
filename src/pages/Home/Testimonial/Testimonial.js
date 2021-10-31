@@ -33,7 +33,7 @@ const Testimonial = () => {
           </Col>
         </Row>
 
-        <Row xs="1" md="2" lg="3" className="pb-5">
+        <Row xs="1" md="2" lg="3" className="pb-5 g-4">
           {persons.length > 0 ? (
             persons.map((person) => (
               <Col>

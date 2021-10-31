@@ -10,7 +10,12 @@ const ServiceCard = ({ service }) => {
   return (
     <Col data-aos="fade-left" data-aos-duration="800">
       <Card className="text-start mx-auto" style={{ width: "18rem" }}>
-        <Card.Img variant="top" className="img-fluid" src={img} />
+        <Card.Img
+          variant="top"
+          style={{ height: "200px" }}
+          className="img-fluid"
+          src={img}
+        />
         <Card.Body>
           <Card.Title className="fw-bold">{name}</Card.Title>
           <p>
@@ -23,7 +28,7 @@ const ServiceCard = ({ service }) => {
             ))}{" "}
             <small> {parseInt(rating) || 4} reviews</small>
           </h6>
-          <h5 className="mt-3 fw-bold"> {price}</h5>
+          <h5 className="mt-3 fw-bold"> {price || 100}</h5>
         </Card.Body>
         <Card.Footer>
           <button
