@@ -10,6 +10,7 @@ const ServiceItem = ({ service }) => {
   const handleBook = (id) => {
     history.push(`/place_order/${id}`);
   };
+  // service items
   return (
     <Col className="m-0 p-0" data-aos="zoom-in-up" data-aos-duration="800">
       <div

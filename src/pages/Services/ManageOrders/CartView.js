@@ -10,6 +10,7 @@ const CartView = ({ allOrder, handleApproved, handleDelete }) => {
       {allOrder.map((order) => {
         const { name, service, registerDate, status, _id, serviceId, userId } =
           order;
+        // manage all ordedr cart view for mobile device
         return (
           <Col key={_id}>
             <Card
@@ -32,7 +33,6 @@ const CartView = ({ allOrder, handleApproved, handleDelete }) => {
                     )}
                   </h6>
                   <div>
-                    {" "}
                     <strong>Action :</strong>
                     <FcApproval
                       onClick={() => handleApproved(serviceId, userId)}

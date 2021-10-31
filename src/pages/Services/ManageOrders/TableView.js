@@ -4,6 +4,7 @@ import { FcApproval } from "react-icons/fc";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { processDate } from "../../../utilities/utilities";
 
+/* table view for tablet and  large device  */
 const TableView = ({ allOrder, handleApproved, handleDelete }) => {
   return (
     <Table striped hover className="table">
@@ -33,6 +34,7 @@ const TableView = ({ allOrder, handleApproved, handleDelete }) => {
                 )}
               </td>
               <td>
+                {/* action button  */}
                 <FcApproval
                   onClick={() => handleApproved(serviceId, userId)}
                   className="admin-approved-btn me-4 fs-3"

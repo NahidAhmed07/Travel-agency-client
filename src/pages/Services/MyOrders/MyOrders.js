@@ -48,7 +48,7 @@ const MyOrders = () => {
               const remaining = myOrders.filter(
                 (order) => order.serviceId !== id
               );
-
+              // set localy remainit data
               setMyOrders(remaining);
               if (remaining.length < 1) {
                 setOrderNotFound(true);
@@ -112,6 +112,7 @@ const MyOrders = () => {
                       <p>
                         <small>{location}</small>
                       </p>
+                      {/* rating added  */}
                       <h6>
                         {[...Array(parseInt(rating || 4) || 4).keys()].map(
                           (index) => (
@@ -125,6 +126,7 @@ const MyOrders = () => {
                         {processDate(data)}
                       </p>
                       <h6>
+                        {/* order status  */}
                         <strong>Status : </strong>
                         {status === "approved" ? (
                           <span className="approved">Approved</span>
@@ -138,7 +140,7 @@ const MyOrders = () => {
                         onClick={() => handleCancel(serviceId)}
                         className="_book-btn"
                       >
-                        Cancel Order{" "}
+                        Cancel Order
                       </button>
                     </Card.Footer>
                   </Card>

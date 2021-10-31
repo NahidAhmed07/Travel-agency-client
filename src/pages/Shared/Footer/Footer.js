@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import axios from "axios";
 import { footerImages } from "../../../utilities/utilities";
 import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://limitless-hollows-06705.herokuapp.com/post")
-      .then((res) => {
-        setPosts(res.data);
-      })
-      .catch((err) => console.log(err.message));
-  }, []);
   return (
     <Container fluid className="footer py-5 text-start">
       <Container>
         <Row xs={1} md={2} lg={3} className="g-5">
+          {/* userful link  */}
           <Col>
             <h5>Useful Link</h5>
             <hr />

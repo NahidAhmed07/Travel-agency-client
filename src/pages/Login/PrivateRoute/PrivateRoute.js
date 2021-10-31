@@ -6,6 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 const PrivateRoute = ({ children, ...rest }) => {
   const { user, isLoading } = useAuth();
 
+  // when dataLoading show spinner
   if (isLoading) {
     return (
       <div className="mt-5 pt-5">

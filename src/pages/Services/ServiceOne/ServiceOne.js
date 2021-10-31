@@ -19,6 +19,7 @@ const ServiceOne = () => {
   return (
     <Container fluid id="services" className="pt-5">
       <Container>
+        {/* top header  */}
         <Row className="mb-4 mb-md-0">
           <Col
             data-aos="fade-right"
@@ -52,6 +53,7 @@ const ServiceOne = () => {
           </Col>
         </Row>
       </Container>
+      {/* service cart  */}
       <Row sm="1" md="2" xl="4">
         {services.length > 0 ? (
           services.map((service) => (

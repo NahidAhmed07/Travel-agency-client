@@ -8,7 +8,7 @@ const ServiceCard = ({ service }) => {
   const { img, name, location, price, rating, _id } = service;
 
   return (
-    <Col>
+    <Col data-aos="fade-left" data-aos-duration="800">
       <Card className="text-start mx-auto" style={{ width: "18rem" }}>
         <Card.Img variant="top" className="img-fluid" src={img} />
         <Card.Body>
@@ -17,6 +17,7 @@ const ServiceCard = ({ service }) => {
             <small>{location}</small>
           </p>
           <h6>
+            {/* raing show using array method */}
             {[...Array(parseInt(rating) || 4).keys()].map((index) => (
               <AiFillStar key={index} className="star-icon" />
             ))}{" "}

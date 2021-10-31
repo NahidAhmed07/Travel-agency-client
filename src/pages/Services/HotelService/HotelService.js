@@ -5,7 +5,6 @@ import Hotels from "../Hotels/Hotels";
 
 const HotelService = () => {
   const [hotels, setHotels] = useState([]);
-
   useEffect(() => {
     axios
       .get(
@@ -16,6 +15,7 @@ const HotelService = () => {
       })
       .catch((err) => console.log(err.message));
   }, []);
+
   return (
     <Container id="hotel" className="my-5">
       <Row className="mb-4 mb-md-0 ">

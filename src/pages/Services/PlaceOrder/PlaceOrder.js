@@ -47,6 +47,7 @@ const PlaceOrder = () => {
     axios
       .post("https://limitless-hollows-06705.herokuapp.com/place_order", data)
       .then((res) => {
+        // user notification
         if (res.data?.serviceAdded) {
           swal({
             title: "Registration Failed !",
@@ -135,6 +136,7 @@ const PlaceOrder = () => {
               <input type="date" {...register("date", { required: true })} />
               <br />
               <button type="submit" className="rag-submit w-100">
+                {/* when placeorder show spinner */}
                 {isUpdated ? (
                   <Spinner
                     animation="border"

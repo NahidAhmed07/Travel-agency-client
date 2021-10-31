@@ -15,9 +15,9 @@ const AddNewService = () => {
     setValue,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm(); // import from react hook form
 
-  setValue("price", "$");
+  setValue("price", "$"); //set default value
 
   const onSubmit = (data) => {
     setIsCreated(true);
@@ -26,11 +26,11 @@ const AddNewService = () => {
     if (!data.img.includes("http")) {
       data.img = randomImage();
     }
-
     axios
       .post("https://limitless-hollows-06705.herokuapp.com/services", data)
       .then((res) => {
         if (res.data.insertedId) {
+          // success message
           swal("Successful!", "New Service Successfully Added !", "success");
         }
         reset();
@@ -38,6 +38,7 @@ const AddNewService = () => {
       })
       .catch((err) => {
         console.log(err.message);
+        // error message
         swal("Failed to Add", "Something went wrong, try again", "error");
         setIsCreated(false);
       });
@@ -45,6 +46,7 @@ const AddNewService = () => {
 
   return (
     <Container className="my-5" onClick={() => setIsMenuOpen(false)}>
+      {/* top herder  */}
       <Row>
         <Col sm="12" md="8" className="text-start">
           <div className="serviceOne mt-1 mt-md-5 pt-1 pt-md-4">
@@ -59,6 +61,7 @@ const AddNewService = () => {
           </div>
         </Col>
       </Row>
+      {/* service adding form  */}
       <Row className="my-5 text-start">
         <Col xm="12" md="7" lg="6" className="mx-auto">
           <div className="reg-form">
@@ -76,16 +79,16 @@ const AddNewService = () => {
               <input {...register("name")} placeholder="Service Name" /> <br />
               <label htmlFor="">
                 Location <span className="text-danger">*</span>
-              </label>{" "}
+              </label>
               <br />
               <input
                 {...register("location", { required: true })}
                 placeholder="Location"
-              />{" "}
+              />
               <br />
               <label htmlFor="">
                 Price <span className="text-danger">*</span>
-              </label>{" "}
+              </label>
               <br />
               <input
                 type="text"
@@ -106,10 +109,7 @@ const AddNewService = () => {
               />
               <br />
               <label htmlFor="">Service Image Url</label> <br />
-              <input
-                {...register("img")}
-                placeholder="service image Url"
-              />{" "}
+              <input {...register("img")} placeholder="service image Url" />
               <br />
               <br />
               <button type="submit" className="rag-submit w-100">

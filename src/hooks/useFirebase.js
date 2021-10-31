@@ -19,16 +19,19 @@ const useFirebase = () => {
   const githubProvider = new GithubAuthProvider();
   const auth = getAuth();
 
+  // google login
   const googleLogin = () => {
     setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
+  // github login
   const githubLogin = () => {
     setIsLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
 
+  // logout fuunction
   const logOut = () => {
     signOut(auth)
       .then(() => {

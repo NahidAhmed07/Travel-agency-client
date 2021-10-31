@@ -11,12 +11,14 @@ const Hotels = ({ hotelItem }) => {
   const history = useHistory();
   const { img, hotel, price, title, location, rating, _id } = hotelItem;
 
+  // hotel cart animation function start
   const handleTextIn = () => {
     textRef.current.style.left = "-70%";
   };
   const handleTextOUt = () => {
     textRef.current.style.left = "0px";
   };
+  // hotel cart animation function end
 
   const handleBook = (id) => {
     history.push(`/place_order/${id}`);

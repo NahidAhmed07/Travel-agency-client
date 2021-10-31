@@ -20,12 +20,14 @@ const Menubar = () => {
   const { isMenuOpen, setIsMenuOpen } = useAuth();
   return (
     <div className="position-relative">
+      {/* navbar main */}
       <Navbar style={{ backgroundColor: "#223645" }} expand="lg" fixed="top">
         <Container>
           <Navbar.Brand className="d-none d-md-block" as={NavLink} to="/home">
             <img src={logo} alt="" height="40px" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          {/* navbar collaps  */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
               <NavHashLink
@@ -96,6 +98,7 @@ const Menubar = () => {
         </Container>
       </Navbar>
 
+      {/* user menu floing menu start  */}
       <div
         className="user-menu text-start"
         style={{ display: isMenuOpen ? "block" : "none" }}
@@ -118,7 +121,7 @@ const Menubar = () => {
           {user.displayName || "Anonymous User"}
         </h5>
         <hr />
-
+        {/* menu items  */}
         <NavHashLink
           to="/my_orders"
           className="user-nav-item"

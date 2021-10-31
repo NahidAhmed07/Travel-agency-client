@@ -1,3 +1,4 @@
+// footer gallery images array and genanet function images
 export const footerImages = [
   "https://i.ibb.co/YfjH3xN/dubai.jpg",
   "https://i.ibb.co/WB5znpw/london.jpg",
@@ -6,12 +7,16 @@ export const footerImages = [
   "https://i.ibb.co/KV2SDs7/male.jpg",
   "https://i.ibb.co/MSQgSys/istanbul.jpg",
 ];
+
+// home section main gellary
 export const gallery = [
   "https://i.ibb.co/yQqpXyx/gallery2.jpg",
   "https://i.ibb.co/2PvFRZy/gallery3.jpg",
   "https://i.ibb.co/zRH7jNp/gallery4.jpg",
   "https://i.ibb.co/y0PVtsy/gallery5.jpg",
 ];
+
+// process data
 const month = [
   "Jan",
   "Feb",
@@ -26,7 +31,7 @@ const month = [
   "Nov",
   "Dec",
 ];
-
+// processs date fucntion
 export const processDate = (date) => {
   const strdata = date.split("-");
   return `${strdata[0]} ${month[strdata[1] - 1]}, ${strdata[2]}`;

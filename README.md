@@ -1,10 +1,10 @@
-# Hospital_Management_System_MediCheck-Assignment-10
+# Travesia_Travel_Agency-Assignment-11
 
 ## Live site link
 
-[live site Link]() : di
+[live site Link](https://travesia-travel.web.app/) : https://travesia-travel.web.app/
 
-## Available Scripts
+## Using Technology and Programming Language
 
 - React.js
 - Bootstrap-5
@@ -28,21 +28,12 @@
 - This Website help you easily Search your needed Travel Destination.
 - Hotel services.
 - Here you will also take your relevant Family Tour package.
-- You can book your Tour Tacket advance from online.
+- You can book your Tour Ticket advance from online.
 - Choose your Favorite Tour package and Hotel Package.
 - Help to you Know Our facilities
 - Our latest news and special Offer and Discount
 - You may also take our 24/7 Emergency helpline service.
 
-<!-- ## useCounter is my own Created Hook
-- useCounter hook is my own creation . this hook create for making hero section background images slider ...this hook return a counter state that update every 4 second . And this hook receive two parameter
-
-1. counter start index Or default value 1
-2. counter end index Or default value 10
-
-- background image change a simple array method this counter change the array index value then slider image is automatically change ...
-  ############## happy Coding with Programming Hero ################# -->
-
 ## Nahid Ahmed (owner This Repo and This Website)
 
-- junior Web Developer in TEAM Rejected .
+- junior Web Developer at TEAM Rejected .

@@ -9,6 +9,7 @@ import { MdTravelExplore } from "react-icons/md";
 
 const AboutUs = () => {
   const [specialties, setSpecialties] = useState([]);
+  // icons array
   const icons = [
     <MdTravelExplore className="icon" />,
     <VscWorkspaceTrusted className="icon" />,

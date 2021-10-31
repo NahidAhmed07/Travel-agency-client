@@ -7,6 +7,7 @@ const PhotoGallery = () => {
   const text = ["South America", "Asia", "Australia", "Africa"];
   return (
     <Container>
+      {/* top heder  */}
       <Row className="mb-4 mb-md-0 g-4">
         <Col sm="12" md="8" className="text-start my-5">
           <div className="serviceOne mt-1 mt-md-5 pt-1 pt-md-4">
@@ -21,8 +22,9 @@ const PhotoGallery = () => {
           </div>
         </Col>
       </Row>
+      {/* Photo gellery card  */}
       <Row className="mb-5 g-4">
-        <Col md="12" lg="6">
+        <Col md="12" lg="6" data-aos="fade-right" data-aos-duration="800">
           <div className="_gallery-div position-relative">
             <img
               className="_gallery-img img-fluid rounded-2"
@@ -35,7 +37,7 @@ const PhotoGallery = () => {
           </div>
         </Col>
         {gallery.map((img, index) => (
-          <Col md="12" lg="3">
+          <Col md="12" lg="3" data-aos="zoom-in-up" data-aos-duration="800">
             <div className="_gallery-div position-relative">
               <img
                 className="_gallery-img img-fluid rounded-2"
@@ -47,7 +49,7 @@ const PhotoGallery = () => {
             </div>
           </Col>
         ))}
-        <Col md="12" lg="6">
+        <Col md="12" lg="6" data-aos="fade-left" data-aos-duration="800">
           <div className="_gallery-div position-relative">
             <img
               className="_gallery-img img-fluid rounded-2"

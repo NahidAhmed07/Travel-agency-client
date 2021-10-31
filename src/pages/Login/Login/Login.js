@@ -38,6 +38,7 @@ const Login = () => {
     githubLogin()
       .then((result) => {
         setUser(result.user);
+        // success alert
         swal({
           title: `Hi ! ${result.user.displayName}`,
           text: "Yor Successfully Login",
@@ -46,6 +47,7 @@ const Login = () => {
         history.push(redirect_uri);
       })
       .catch((err) => {
+        // error alert
         swal({
           title: `Login Failed !`,
           text: "Something went Wrong",

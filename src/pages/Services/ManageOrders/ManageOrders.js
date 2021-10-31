@@ -107,6 +107,7 @@ const ManageOrders = () => {
       <Row className="my-5">
         {allOrder.length > 0 ? (
           <div>
+            {/* table view for tablet and  large device  */}
             <div className="d-none d-md-block">
               <TableView
                 allOrder={allOrder}
@@ -114,6 +115,7 @@ const ManageOrders = () => {
                 handleDelete={handleDelete}
               ></TableView>
             </div>
+            {/* cart view for mobile  device  */}
             <div className="d-md-none">
               <CartView
                 allOrder={allOrder}
