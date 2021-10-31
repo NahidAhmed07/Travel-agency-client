@@ -1,0 +1,29 @@
+._gallery-img {
+  height: 100% !important;
+  width: 100%;
+  transition: 0.4s;
+}
+
+._gallery-div {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+._gallery-div:hover ._gallery-img {
+  transform: scale(1.1);
+}
+._gallery-text {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 35%;
+  color: white;
+}
+
+._gallery-overlay {
+  background: rgba(0, 0, 0, 0.356);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

@@ -6,6 +6,12 @@ export const footerImages = [
   "https://i.ibb.co/KV2SDs7/male.jpg",
   "https://i.ibb.co/MSQgSys/istanbul.jpg",
 ];
+export const gallery = [
+  "https://i.ibb.co/yQqpXyx/gallery2.jpg",
+  "https://i.ibb.co/2PvFRZy/gallery3.jpg",
+  "https://i.ibb.co/zRH7jNp/gallery4.jpg",
+  "https://i.ibb.co/y0PVtsy/gallery5.jpg",
+];
 const month = [
   "Jan",
   "Feb",
